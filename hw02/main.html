@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script>
+        function btn()
+        {
+            var k=document.getElementById("in").value;
+            if (k > 0 && k < 10)
+            {
+                document.write("<table style='border-collapse: separate;'>");
+                for(var i=1;i<=k;i++)
+                {
+                    document.write('<tr>');
+                    for(var j=1;j<=i;j++)
+                    {
+                        document.write('<td style="background-color:rgba(46, 165, 145, 0.667);border:#ffff99 3px solid;width:3em;height:2em;">'+i+'*'+j+'='+i*j+'</td>');
+                    }
+                    document.write('</tr>');
+                }
+                document.write('</table>');
+            }
+            else alert("n为1~9之间的整数！")
+        }
+        </script></head>
+        <body>
+            <input type="text" id="in"placeholder="输出n*n的乘法表，请输入n的值"style="width:300px;height:30px;"/>
+            <input type="button" id="bu" value="确定" onclick="btn()"style="background-color:rgba(46, 165, 145, 0.667);width:50px;height:40px;"/>
+        </body>
